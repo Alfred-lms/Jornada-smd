@@ -32,7 +32,7 @@ class DashboardScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: primaryColor,
                         ),
-                        child: SvgPicture.asset("assets\icons\Search.svg"),
+                        child: SvgPicture.asset('assets\icons\search.svg'),
                       ),
                     ),
                   ),

@@ -2,14 +2,14 @@ import 'package:admin/constants.dart';
 import 'package:admin/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+// ignore: unused_import
 import 'package:flutter/services.dart';
 
-
 void main() {
- // WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsFlutterBinding.ensureInitialized();
 
   //SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft,DeviceOrientation.landscapeRight]).then((_){
-    runApp(MyApp());
+  runApp(MyApp());
   //}
   //);
 }
