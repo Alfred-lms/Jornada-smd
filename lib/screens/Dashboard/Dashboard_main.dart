@@ -13,7 +13,7 @@ class DashboardScreen extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  "dashboard",
+                  "Jornada SMD",
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 Spacer(),
@@ -32,7 +32,7 @@ class DashboardScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: primaryColor,
                         ),
-                        child: SvgPicture.asset('assets\icons\search.svg'),
+                        child: SvgPicture.asset("assets/icons/search.svg"),
                       ),
                     ),
                   ),
