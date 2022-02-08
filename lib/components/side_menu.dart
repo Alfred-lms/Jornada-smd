@@ -22,17 +22,7 @@ class SideMenu extends StatelessWidget {
             ),
             DrawerListTile(
               title: "Meu Perfil",
-              svgSource: "assets/icons/unknown.svg",
-              press: () {},
-            ),
-            DrawerListTile(
-              title: "Arquivos",
-              svgSource: "assets/icons/media_file.svg",
-              press: () {},
-            ),
-            DrawerListTile(
-              title: "Meu Perfil",
-              svgSource: "assets/icons/unknown.svg",
+              svgSource: "assets/icons/logo.svg",
               press: () {},
             ),
           ],

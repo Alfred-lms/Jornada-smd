@@ -10,9 +10,7 @@ class Responsive extends StatelessWidget {
     @required this.landscape,
   }) : super(key: key);
 
-// This size work fine on my design, maybe you need some customization depends on your design
-
-  // This isMobile, isTablet, isDesktop helep us later
+  // This isMobile, isLandscape helep us later
   static bool isMobile(BuildContext context) =>
       MediaQuery.of(context).size.width < MediaQuery.of(context).size.height;
 
@@ -22,11 +20,11 @@ class Responsive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
-    // If our width is more than 1100 then we consider it a desktop
+    // If our width is more than our height we consider it a landscape
     if (_size.width > _size.height) {
       return landscape;
     }
-    // Or less then that we called it mobile
+    // Or less then that we called it portrait
     else {
       return mobile;
     }
