@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class Header extends StatelessWidget {
   const Header({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -29,7 +29,7 @@ class Header extends StatelessWidget {
 
 class FilterButton extends StatelessWidget {
   const FilterButton({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -50,7 +50,7 @@ class FilterButton extends StatelessWidget {
 
 class SearchField extends StatelessWidget {
   const SearchField({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

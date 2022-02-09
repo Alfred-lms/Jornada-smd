@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -35,10 +35,10 @@ class SideMenu extends StatelessWidget {
 
 class DrawerListTile extends StatelessWidget {
   const DrawerListTile({
-    Key key,
-    @required this.title,
-    @required this.svgSource,
-    @required this.press,
+    Key? key,
+    required this.title,
+    required this.svgSource,
+    required this.press,
   }) : super(key: key);
 
   final String title, svgSource;
