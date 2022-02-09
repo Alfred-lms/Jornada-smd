@@ -11,13 +11,13 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
-          "JORNADA SMD!",
-          style: Theme.of(context).textTheme.headline6,
-        ),
-        Spacer(
-          flex: 2,
-        ),
+        // Text(
+        //   "JORNADA SMD!",
+        //   style: Theme.of(context).textTheme.headline6,
+        // ),
+        // Spacer(
+        //   flex: 2,
+        // ),
         Expanded(
           child: SearchField(),
         ),

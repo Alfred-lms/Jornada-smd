@@ -31,13 +31,30 @@ class Databasehandler {
     );
   }
 
-  Future<void> updateCadeira(int id, int feita) async {
+  Future<void> updateCadeira(Cadeira feita) async {
     final db = await initializeDB();
     await db.update(
       'cadeiras',
-      {'cadeiras': 0},
+      feita.toMap(),
       where: 'feita = ?',
       whereArgs: [feita],
     );
+  }
+
+  Future<List<Cadeira>> getCadeira() async {
+    final db = await initializeDB();
+    final List<Map<String, dynamic>> maps = await db.query('cadeiras');
+
+    return List.generate(maps.length, (i) {
+      return Cadeira(
+        id: maps[i]['id'],
+        nome: maps[i]['nome'],
+        horas: maps[i]['horas'],
+        obg: maps[i]['obg'],
+        elt: maps[i]['elt'],
+        opt: maps[i]['opt'],
+        feita: maps[i]['feita'],
+      );
+    });
   }
 }
