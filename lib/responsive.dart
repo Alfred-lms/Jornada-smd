@@ -5,9 +5,9 @@ class Responsive extends StatelessWidget {
   final Widget landscape;
 
   const Responsive({
-    Key? key,
-    required this.mobile,
-    required this.landscape,
+    Key key,
+    @required this.mobile,
+    @required this.landscape,
   }) : super(key: key);
 
   // This isMobile, isLandscape helep us later

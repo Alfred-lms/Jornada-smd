@@ -29,4 +29,10 @@ CREATE TABLE cadeira (
     db.insert("cadeiras", cadeiras.toMap());
     return true;
   }
+
+  Future<List<Cadeira>> getData() async {
+    final Database db = await initDB();
+    final List<Map<String, Object>> datas = await db.query("cadeiras");
+    return datas.map((e) => Cadeira.fromMap(e)).toList();
+  }
 }
