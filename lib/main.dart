@@ -4,14 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 // ignore: unused_import
 import 'package:flutter/services.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:path/path.dart';
 
-void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
-
-  //SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft,DeviceOrientation.landscapeRight]).then((_){
+void main() async {
   runApp(MyApp());
-  //}
-  //);
 }
 
 class MyApp extends StatelessWidget {
