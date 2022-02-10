@@ -9,13 +9,13 @@ class Cadeira {
   final int feita;
 
   Cadeira({
-    this.id,
-    this.nome,
-    this.horas,
-    this.obg,
-    this.elt,
-    this.opt,
-    this.feita,
+    required this.id,
+    required this.nome,
+    required this.horas,
+    required this.obg,
+    required this.elt,
+    required this.opt,
+    required this.feita,
   });
   Cadeira.fromMap(Map<String, dynamic> sqlite)
       : id = sqlite["id"],
@@ -46,9 +46,9 @@ class Usuario {
   final int semestre;
 
   Usuario({
-    this.matricula,
-    this.nome,
-    this.semestre,
+    required this.matricula,
+    required this.nome,
+    required this.semestre,
   });
   Usuario.fromMap(Map<String, dynamic> sqlite)
       : matricula = sqlite['matricula'],

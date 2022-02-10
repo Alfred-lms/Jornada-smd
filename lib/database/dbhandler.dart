@@ -6,10 +6,10 @@ class Databasehandler {
   Future<Database> initDB() async {
     String path = await getDatabasesPath();
     return openDatabase(
-      join(path, 'cadeiras.sqlite'),
+      join(path, 'cadeiras.db'),
       onCreate: (database, version) async {
         await database.execute("""
-CREATE TABLE cadeira (
+CREATE TABLE cadeiras (
   id TEXT PRIMARY KEY,
   nome TEXT NOT NULL,
   horas INTEGER NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE cadeira (
 
   Future<List<Cadeira>> getData() async {
     final Database db = await initDB();
-    final List<Map<String, Object>> datas = await db.query("cadeiras");
+    final List<Map<String, Object?>> datas = await db.query("cadeiras");
     return datas.map((e) => Cadeira.fromMap(e)).toList();
   }
 }

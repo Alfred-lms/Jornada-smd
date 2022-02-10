@@ -1,7 +1,7 @@
 import 'package:admin/constants.dart';
 import 'package:admin/screens/main_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 // ignore: unused_import
 import 'package:flutter/services.dart';
 // ignore: unused_import
@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Admin Panel',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: bgColor,
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-            .apply(bodyColor: Colors.white),
+        // textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+        // .apply(bodyColor: Colors.white),
         canvasColor: secondaryColor,
       ),
       home: Main2test(),

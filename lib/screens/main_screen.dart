@@ -67,7 +67,7 @@ import 'Dashboard/Dashboard_main.dart';
 // }
 
 class Main2test extends StatefulWidget {
-  const Main2test({Key key}) : super(key: key);
+  const Main2test({Key? key}) : super(key: key);
 
   @override
   _Main2testState createState() => _Main2testState();
@@ -77,7 +77,7 @@ class _Main2testState extends State<Main2test> {
   List<Cadeira> datas = [];
   bool fetching = true;
 
-  Databasehandler cadeira;
+  late Databasehandler cadeira;
   @override
   void initState() {
     super.initState();
@@ -95,32 +95,39 @@ class _Main2testState extends State<Main2test> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   title: Text(
+      //     'Jornada SMD',
+      //     style: Theme.of(context).textTheme.headline6,
+      //   ),
+      //   backgroundColor: Colors.transparent,
+      //   actions: <Widget>[
+      //     Flexible(
+      //       child: Row(children: [
+      //         Container(
+      //           width: MediaQuery.of(context).size.width,
+      //           child: Spacer(
+      //             flex: 2,
+      //           ),
+      //         ),
+      //         Expanded(
+      //           child: SearchField(),
+      //         ),
+      //         Expanded(
+      //           child: IconButton(
+      //             onPressed: () {},
+      //             icon: const Icon(Icons.filter_list_rounded),
+      //             iconSize: 40,
+      //           ),
+      //         ),
+      //       ]),
+      //     )
+      //   ],
+      // ),
       appBar: AppBar(
-        title: Text(
-          'Jornada SMD',
-          style: Theme.of(context).textTheme.headline6,
-        ),
         backgroundColor: Colors.transparent,
-        actions: <Widget>[
-          Flexible(
-            child: Row(children: [
-              Expanded(
-                child: Spacer(
-                  flex: 2,
-                ),
-              ),
-              Expanded(
-                child: SearchField(),
-              ),
-              Expanded(
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.filter_list_rounded),
-                  iconSize: 40,
-                ),
-              ),
-            ]),
-          )
+        actions: [
+          Header(),
         ],
       ),
       drawer: DrawerNavigation(),
