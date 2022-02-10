@@ -21,9 +21,9 @@ class Cadeira {
       : id = res['id'],
         nome = res['nome'],
         horas = int.parse(res['horas']),
-        obg = int.parse(res['obg']),
-        elt = int.parse(res['elt']),
-        opt = int.parse(res['opt']),
+        obg = int.parse(res['obg'] ?? '0'),
+        elt = int.parse(res['elt'] ?? '0'),
+        opt = int.parse(res['opt'] ?? '0'),
         feita = int.parse(res['feita'] ?? '0');
 
   Map<String, Object> toMap() {

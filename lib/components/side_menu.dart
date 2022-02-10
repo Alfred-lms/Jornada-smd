@@ -45,15 +45,17 @@ class DrawerListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-        onTap: press,
-        horizontalTitleGap: 0.0,
-        leading: SvgPicture.asset(
-          svgSource,
-          color: Colors.white,
-          height: 18,
-        ),
-        title: Text(title, style: TextStyle(color: Colors.white70)));
+    return Container(
+      child: ListTile(
+          onTap: press,
+          horizontalTitleGap: 0.0,
+          leading: SvgPicture.asset(
+            svgSource,
+            color: Colors.white,
+            height: 18,
+          ),
+          title: Text(title, style: TextStyle(color: Colors.white70))),
+    );
   }
 }
 
