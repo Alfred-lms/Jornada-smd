@@ -9,63 +9,6 @@ import 'package:admin/responsive.dart';
 import 'package:flutter/material.dart';
 import 'Dashboard/Dashboard_main.dart';
 
-// class MainScreen extends StatelessWidget {
-//   late Cadeira cadeira;
-
-//   void initDB() {
-//     super.initDB();
-//     cadeira = Cadeira();
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text(
-//           'Jornada SMD',
-//           style: Theme.of(context).textTheme.headline6,
-//         ),
-//         backgroundColor: Colors.transparent,
-//         actions: <Widget>[
-//           Flexible(
-//             child: Row(children: [
-//               Expanded(
-//                 child: Spacer(
-//                   flex: 2,
-//                 ),
-//               ),
-//               Expanded(
-//                 child: SearchField(),
-//               ),
-//               Expanded(
-//                 child: IconButton(
-//                   onPressed: () {},
-//                   icon: const Icon(Icons.filter_list_rounded),
-//                   iconSize: 40,
-//                 ),
-//               ),
-//             ]),
-//           )
-//         ],
-//       ),
-//       drawer: DrawerNavigation(),
-//       body: SafeArea(
-//           child: Row(
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: [
-//           //       Expanded(
-//           //         child: SideMenu(),
-//           //       ),
-//           Expanded(
-//             flex: Responsive.isLandscape(context) ? 3 : 1,
-//             child: DashboardScreen(),
-//           ),
-//         ],
-//       )),
-//     );
-//   }
-// }
-
 class Main2test extends StatefulWidget {
   const Main2test({Key? key}) : super(key: key);
 
@@ -95,35 +38,6 @@ class _Main2testState extends State<Main2test> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(
-      //     'Jornada SMD',
-      //     style: Theme.of(context).textTheme.headline6,
-      //   ),
-      //   backgroundColor: Colors.transparent,
-      //   actions: <Widget>[
-      //     Flexible(
-      //       child: Row(children: [
-      //         Container(
-      //           width: MediaQuery.of(context).size.width,
-      //           child: Spacer(
-      //             flex: 2,
-      //           ),
-      //         ),
-      //         Expanded(
-      //           child: SearchField(),
-      //         ),
-      //         Expanded(
-      //           child: IconButton(
-      //             onPressed: () {},
-      //             icon: const Icon(Icons.filter_list_rounded),
-      //             iconSize: 40,
-      //           ),
-      //         ),
-      //       ]),
-      //     )
-      //   ],
-      // ),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         actions: [
@@ -134,16 +48,6 @@ class _Main2testState extends State<Main2test> {
       body: fetching
           ? Center(
               child: CircularProgressIndicator(),
-              //           crossAxisAlignment: CrossAxisAlignment.start,
-              //           children: [
-              //             //       Expanded(
-              //             //         child: SideMenu(),
-              //             //       ),
-              //             Expanded(
-              //               flex: Responsive.isLandscape(context) ? 3 : 1,
-              //               child: DashboardScreen(),
-              //             ),
-              //           ],
             )
           : ListView.builder(
               itemCount: datas.length,

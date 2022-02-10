@@ -11,7 +11,6 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      // child: SingleChildScrollView(
       child: Column(
         children: [
           DrawerHeader(
@@ -24,12 +23,11 @@ class SideMenu extends StatelessWidget {
           ),
           DrawerListTile(
             title: "Meu Perfil",
-            svgSource: "assets/icons/logo.svg",
+            svgSource: 'assets/icons/folder.svg',
             press: () {},
           ),
         ],
       ),
-      // ),
     );
   }
 }

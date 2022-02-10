@@ -50,7 +50,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - lib/database/cadeiras.db
+    - assets/db/cadeiras.db
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

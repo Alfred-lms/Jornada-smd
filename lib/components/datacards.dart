@@ -8,8 +8,14 @@ class DataCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: CircleAvatar(),
-      title: Text(data.id),
-      subtitle: Text(data.nome),
+      title: Text(
+        data.id + " - " + data.nome,
+        style: TextStyle(fontSize: 16),
+      ),
+      subtitle: Text(
+        'Carga horária' + ' - ' + data.horas.toString() + ' Horas',
+        style: TextStyle(fontSize: 10),
+      ),
       trailing: CircleAvatar(),
     );
   }

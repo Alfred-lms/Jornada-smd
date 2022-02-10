@@ -17,14 +17,14 @@ class Cadeira {
     required this.opt,
     required this.feita,
   });
-  Cadeira.fromMap(Map<String, dynamic> sqlite)
-      : id = sqlite["id"],
-        nome = sqlite["nome"],
-        horas = sqlite["horas"],
-        obg = sqlite["obg"],
-        elt = sqlite["elt"],
-        opt = sqlite["opt"],
-        feita = sqlite["feita"];
+  Cadeira.fromMap(Map<String, dynamic> res)
+      : id = res['id'],
+        nome = res['nome'],
+        horas = int.parse(res['horas']),
+        obg = int.parse(res['obg']),
+        elt = int.parse(res['elt']),
+        opt = int.parse(res['opt']),
+        feita = int.parse(res['feita'] ?? '0');
 
   Map<String, Object> toMap() {
     return {
@@ -36,6 +36,11 @@ class Cadeira {
       'opt': opt,
       'feita': feita,
     };
+  }
+
+  @override
+  String toString() {
+    return 'Cadeira{id:$id,nome:$nome,horas:$horas,obg:$obg,elt:$elt,opt:$opt}';
   }
 }
 
@@ -50,10 +55,10 @@ class Usuario {
     required this.nome,
     required this.semestre,
   });
-  Usuario.fromMap(Map<String, dynamic> sqlite)
-      : matricula = sqlite['matricula'],
-        nome = sqlite['nome'],
-        semestre = sqlite['semestre'];
+  Usuario.fromMap(Map<String, dynamic> res)
+      : matricula = int.parse(res['matricula']),
+        nome = res['nome'],
+        semestre = int.parse(res['semestre']);
   Map<String, Object> toMap() {
     return {
       'matricula': matricula,
