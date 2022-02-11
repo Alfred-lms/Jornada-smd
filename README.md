@@ -7,3 +7,6 @@ Este projeto tem como propósito permitir a visualização e prioridade das cade
 
 Por meio dele é possível visualizar todas as cadeiras e as prioridades.
 
+## Download do APK
+
+ - [Jornada SMD.apk](https://github.com/Alfred-lms/Jornada-smd/blob/Test/jornada-smd.apk)
